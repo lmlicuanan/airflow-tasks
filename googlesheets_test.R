@@ -15,4 +15,4 @@ googlesheets_test.dt <-
     sheet = "Sheet1") %>%
   as.data.frame()
 
-write.csv(x = googlesheets_test.dt, file = glue("/Users/linolicuanan/Desktop/{Sys.time()}.csv"))
+write.csv(x = googlesheets_test.dt, file = glue("{Sys.getenv('DIR_DESKTOP')}/{Sys.time()}.csv"))
