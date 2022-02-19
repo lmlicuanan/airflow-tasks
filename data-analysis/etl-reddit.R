@@ -4,4 +4,3 @@ suppressPackageStartupMessages({
   library(RedditExtractoR)
 })
 
-   
