@@ -4,15 +4,13 @@ suppressPackageStartupMessages({
   library(lubridate)
 })
 
-options(gargle_oauth_email = "linolicuanan@gmail.com")
-
-gs4_auth(
+sheets_auth(
   email = "linolicuanan@gmail.com",
   use_oob = TRUE,
   cache = TRUE,
+  path = "home/linolicuanan/airflow-medium/secure/key-file.json",
   token = Sys.getenv("GOOGLESHEETS_TOKEN")
 )
-
 
 write_sheet(
   tibble(updated_at = as_datetime(now())), 
